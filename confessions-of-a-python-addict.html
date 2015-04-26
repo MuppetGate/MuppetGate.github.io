@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Confessions of a Python addict</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">The MuppetGate Conspiracy </a></h1>
+                <nav><ul>
+                    <li><a href="/pages/about.html">About</a></li>
+                    <li class="active"><a href="/category/programming.html">Programming</a></li>
+                    <li><a href="/category/technology.html">Technology</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/confessions-of-a-python-addict.html" rel="bookmark"
+           title="Permalink to Confessions of a Python addict">Confessions of a Python addict</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-07-15T23:06:00+02:00">
+                Published: Tue 15 July 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/muppetgate.html">MuppetGate</a>
+        </address>
+<p>In <a href="/category/programming.html">Programming</a>. </p>
+<p>tags: <a href="/tag/python.html">Python</a> </p>
+</footer><!-- /.post-info -->      <p>Hello! Well, this is my first techy blog. I've been in IT for more years than I care to remember, and I've never felt the need to write blog about it. A couple of decades covering C, C++, FoxPro (remember that??) and then Java. I've dabbled in a few small open-source contributions, but I've never felt the urge to blog about this.</p>
+<p>So what changed?</p>
+<p>Well, I discovered Python. </p>
+<p>Actually that's not strictly true; I've been aware of Python for about four or five years, but as soon as I discovered that block structures were defined by indentation, I ran, leaving a me-shaped hole in the wall.</p>
+<p>And so me and Python and kept apart, eyeing each other over the fence. A few more years, a few more languages (Ruby and Scala), and few more frameworks (Spring, Rails, Grails, Play).</p>
+<p>I'm not saying that all of this soft tech wasn't great, but I was getting jaded. I longed for simplicity and clarity. And when you hear of simplicity and clarity, then in the next sentence you usually hear Python.</p>
+<p>So I gave it another go; a real project this time, not just a bit of dabbling; I had a go at a real project: an <a href="http://alfredapp.com">Alfred </a> workflow written in Python. After about an hour of reading and three hours programming, I realised something:</p>
+<h3>Indentations aren't weird</h3>
+<p>They actually make a lot of sense. Superfluous elements such as {} and IF . . . ENDIF are removed from your code, revealing just the structure. After working with Python for just a few minutes, semantic indents became a lot more familiar and much easier to read.</p>
+<div class="highlight"><pre><span class="k">if</span> <span class="n">output</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s">&quot;Invalid&quot;</span><span class="p">):</span>
+    <span class="n">wf</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;. . .&quot;</span><span class="p">,</span> <span class="n">subtitle</span><span class="o">=</span><span class="n">output</span><span class="p">,</span> <span class="n">valid</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">arg</span><span class="o">=</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">icon</span><span class="o">=</span><span class="n">ICON_ERROR</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">wf</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">output</span><span class="p">,</span> <span class="n">subtitle</span><span class="o">=</span><span class="s">&quot;Copy to clipboard&quot;</span><span class="p">,</span> <span class="n">valid</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">arg</span><span class="o">=</span><span class="n">output</span><span class="p">)</span>
+</pre></div>
+
+
+<p>The indentation has to be consistent; if you indent by 4 spaces then all your indentation has to be based on 4 spaces (which kind of makes sense. Why would you suddenly start indenting with 3 spaces halfway through the file?). I'll admit it was a pain at first, but as I said, this was only for the first few minutes. Afterwards, I became obessessed with neatness. If the code made the indentation sink to the right side of the page, I thought <em>'Python! Pffft!'</em>, and then I thought <em>'. . . or maybe I should break this down into functions to make it neater.'</em></p>
+<h3>Python is a better teaching language than Java</h3>
+<p>There, I said it. And look, the sky hasn't fallen. Sorry, but it's true. Java is great for teaching object-oriented fundamentals, but before a programming student reaches that, he has to understand good practices in structure and abstraction. This is where Python excels because the semantic indentation <em>forces</em> good structure. Why? Simply because your code will look damn ugly otherwise.</p>
+<h3>The free stuff is amazing</h3>
+<p>Yes, more libraries than you can shake a stick at, and all the free. As many as Java? I dunno, maybe. I'm just going to call out one or two of my favourites:</p>
+<ul>
+<li>
+<p><a href="http://fdik.org/pyPEG/">pyPeg</a> – The best way to parse complex stuff coming in from a file or the command line</p>
+</li>
+<li>
+<p><a href="http://labix.org/python-dateutil">DateUtil</a> – Python's standard date-handling framework is awesome enough. Adding the DateUtil framework handling any kind of date problem ridiculously easy. I mean, how many frameworks bother to tell when Easter's coming around.</p>
+</li>
+</ul>
+<h3>And so is the online community</h3>
+<p>To be honest, I've never come across a geek pool I didn't like, but the folk who know Python <em>really</em> know Python, and the they're always ready to help with the dumbest questions (of which I had plenty!)  </p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="http://twitter.com/muppetgate">twitter</a></li>
+                            <li><a href="http://github.com/muppetgate">github</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
