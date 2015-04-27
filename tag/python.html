@@ -1,206 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+>
 <head>
-        <meta charset="utf-8" />
-        <title>The MuppetGate Conspiracy - Python</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+    <title>Python - The MuppetGate Conspiracy</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+
+
+
+    <meta name="author" content="MuppetGate" />
+    <meta name="keywords" content="Python" />
+
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="The MuppetGate Conspiracy" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="The MuppetGate Conspiracy"/>
+        <meta property="og:url" content=""/>
+        <meta property="og:description" content="The MuppetGate Conspiracy"/>
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
 </head>
+<body>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">The MuppetGate Conspiracy </a></h1>
-                <nav><ul>
-                    <li><a href="/pages/about.html">About</a></li>
-                    <li><a href="/category/programming.html">Programming</a></li>
-                    <li><a href="/category/technology.html">Technology</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+The MuppetGate Conspiracy            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="/pages/about.html">
+                             About
+                          </a></li>
+                        <li >
+                            <a href="/category/programming.html">Programming</a>
+                        </li>
+                        <li >
+                            <a href="/category/technology.html">Technology</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/how-i-came-to-understand-currying.html">How I came to understand Currying</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2014-08-01T23:06:00+02:00">
-                Published: Fri 01 August 2014
-        </abbr>
+            <article>
+                <h2><a href="/how-i-came-to-understand-currying.html">How I came to understand Currying</a></h2>
+                <div class="summary"><p>Okay, it wasn't that I didn't understand the principles; I'd read plenty of articles covering it, looked at lots of code in Groovy and Scala. No, the idea behind currying seemed pretty easy enough: using functions to create functions so that the required parameters can be reduced ...</p>
+                    <a class="btn btn-default btn-xs" href="/how-i-came-to-understand-currying.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/confessions-of-a-python-addict.html">Confessions of a Python addict</a></h2>
+                <div class="summary"><p>Hello! Well, this is my first techy blog. I've been in IT for more years than I care to remember, and I've never felt the need to write blog about it. A couple of decades covering C, C++, FoxPro (remember that??) and then Java. I've dabbled in ...</p>
+                    <a class="btn btn-default btn-xs" href="/confessions-of-a-python-addict.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/muppetgate.html">MuppetGate</a>
-        </address>
-<p>In <a href="/category/programming.html">Programming</a>. </p>
-<p>tags: <a href="/tag/python.html">Python</a> <a href="/tag/alfredapp.html">AlfredApp</a> </p>
-</footer><!-- /.post-info --><p>Okay, it wasn't that I didn't understand the principles; I'd read plenty of articles covering it, looked at lots of code in Groovy and Scala. No, the idea behind currying seemed pretty easy enough: using functions to create functions so that the required parameters can be reduced (by including them as part of the generated function). Yep, all pretty straightforward.</p>
-<p>What I didn't understand was why the hell I'd ever need to do that. What I'd been lacking, all these years, was a decent use case. </p>
-<p>And a few weeks ago, one presented itself from the most unlikely of places: me!</p>
-<p>When I decide I'm going to knuckle down and learn a new programming language, I like to have a crack a simple poject that would have some real-world value. (I've done 'Hello World' apps to death.) Now I'm a big fan of the <a href="http://alfredapp.com">Alfred</a> launcher, so I thought I'd have a go at a workflow written in Python. I decided to go for a basic date calculator, as that's something I always seem to need, and I sometimes can't be bothered to go find the iPhone.</p>
-<p><img alt="dcalc for Alfred" src="/assets/images/dcalc0.png" /></p>
-<p>As well as being able to use dates and times in the calculations, I thought it would be nice if I included a constants (like Christmas, birthays) and variables (Easter, which moves around in ways I cannot begin to fathom). I also thought it would be nice to make easy for folk to add their own functions in the future. To this end, I came up with a simple scheme which did the business using a list of Python functions and a map.</p>
-<p>So we start with the function:</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">next_easter</span><span class="p">(</span><span class="n">date_format</span><span class="p">):</span>
-    <span class="n">easter_rule</span> <span class="o">=</span> <span class="n">rrule</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="n">YEARLY</span><span class="p">,</span> <span class="n">byeaster</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">easter_rule</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="n">_get_current_date</span><span class="p">(),</span> <span class="n">inc</span><span class="o">=</span><span class="bp">False</span><span class="p">),</span> <span class="n">date_format</span>
-</pre></div>
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
 
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://twitter.com/muppetgate"><i class="fa fa-twitter-square fa-lg"></i> twitter</a></li>
+                <li class="list-group-item"><a href="http://github.com/muppetgate"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
 
-<p>This returns the date that the next Easter Sunday falls on. It takes a date format as a parameter and also returns it, along with the calculated date, when the function exits. We've got a similar function for giving back the current date:</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">current_date</span><span class="p">(</span><span class="n">date_format</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">_get_current_date</span><span class="p">(),</span> <span class="n">date_format</span>
-</pre></div>
-
-
-<p>To expose the functions to the workflow, I simply put them in a map:</p>
-<div class="highlight"><pre><span class="n">DATE_FUNCTION_MAP</span> <span class="o">=</span> <span class="p">{</span>
-
-    <span class="s">&quot;date&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
-    <span class="s">&quot;today&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
-    <span class="s">&quot;time&quot;</span><span class="p">:</span> <span class="n">current_time</span><span class="p">,</span>
-    <span class="s">&quot;now&quot;</span><span class="p">:</span> <span class="n">now</span><span class="p">,</span>
-    <span class="s">&quot;yesterday&quot;</span><span class="p">:</span> <span class="n">yesterday</span><span class="p">,</span>
-    <span class="s">&quot;tomorrow&quot;</span><span class="p">:</span> <span class="n">tomorrow</span><span class="p">,</span>
-    <span class="s">&quot;easter&quot;</span><span class="p">:</span> <span class="n">next_easter</span><span class="p">,</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>The map key acts as the keyword to call the function and supply it to the workflow. When the user types the key, the workflow will pick the function from the map, run it and return the date. </p>
-<div class="highlight"><pre><span class="k">return</span> <span class="n">DATE_FUNCTION_MAP</span><span class="p">[</span><span class="n">key</span><span class="p">](</span><span class="n">date_format_str</span><span class="p">)</span>
-</pre></div>
-
-
-<p>As you can see, the function can do anything as long as it takes a date format as a single parameter and returns a date object along with a date format. (And I love the fact that you can return more than one value from a Python function.) 
-I was pretty chuffed with the whole setup because it meant I could run clever little calculations like this:</p>
-<p><img alt="dcalc for Alfred" src="/assets/images/dcalc1.png" /></p>
-<p>Now the trouble came when a friend asked if I could add another function to the workflow.
-'Name it,' I said confidently.
-'Well, if I type in a day of the week, could you tell me the next date that it falls on?'
-'I reckon so. What if I type "Tue" and the current day is Tuesday?'
-'Then I want the date for the next Tuesday.'</p>
-<p>No problem. All I needed was a function that took the day of the week and returned the next occurrence. The only thing was that this function has to take a single parameter (the date format) and return two values (a date object and a date format). So, my first uneducated attempt looked like this:</p>
-<div class="highlight"><pre><span class="n">DATE_FUNCTION_MAP</span> <span class="o">=</span> <span class="p">{</span>
-
-    <span class="s">&quot;date&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
-    <span class="s">&quot;today&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
-    <span class="s">&quot;time&quot;</span><span class="p">:</span> <span class="n">current_time</span><span class="p">,</span>
-    <span class="s">&quot;now&quot;</span><span class="p">:</span> <span class="n">now</span><span class="p">,</span>
-    <span class="s">&quot;yesterday&quot;</span><span class="p">:</span> <span class="n">yesterday</span><span class="p">,</span>
-    <span class="s">&quot;tomorrow&quot;</span><span class="p">:</span> <span class="n">tomorrow</span><span class="p">,</span>
-    <span class="s">&quot;easter&quot;</span><span class="p">:</span> <span class="n">next_easter</span><span class="p">,</span>
-    <span class="s">&quot;mon&quot;</span><span class="p">:</span> <span class="n">get_Monday</span><span class="p">,</span>
-    <span class="s">&quot;tue&quot;</span><span class="p">:</span> <span class="n">get_Tuesday</span><span class="p">,</span>
-    <span class="s">&quot;wed&quot;</span><span class="p">:</span> <span class="n">get_Wednesday</span><span class="p">,</span>
-    <span class="s">&quot;thu&quot;</span><span class="p">:</span> <span class="n">get_Thursday</span><span class="p">,</span>
-    <span class="s">&quot;fri&quot;</span><span class="p">:</span> <span class="n">get_Friday</span><span class="p">,</span>
-    <span class="s">&quot;sat&quot;</span><span class="p">:</span> <span class="n">get_Saturday</span><span class="p">,</span>
-    <span class="s">&quot;sun&quot;</span><span class="p">:</span> <span class="n">get_Sunday</span>
-<span class="p">}</span>
-</pre></div>
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="/how-i-came-to-understand-currying.html">
+                            How I came to understand Currying
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/confessions-of-a-python-addict.html">
+                            Confessions of a Python addict
+                        </a>
+                    </li>
+                </ul>
+            </li>
 
 
-<p>Seven functions, one for each day of the week. It wasn't bad; it did the job, but it just didn’t feel very Pythony. What I was really after was single function that could take a parameter to indicate the day of the week I was looking to process:</p>
-<div class="highlight"><pre><span class="n">DATE_FUNCTION_MAP</span> <span class="o">=</span> <span class="p">{</span>
+            <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <ul class="list-group list-inline tagcloud" id="tags">
+                    <li class="list-group-item tag-4">
+                        <a href="/tag/alfredapp.html">
+                            AlfredApp
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="/tag/apple.html">
+                            Apple
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-1">
+                        <a href="/tag/python.html">
+                            Python
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="/tag/technology.html">
+                            Technology
+                        </a>
+                    </li>
+                </ul>
+            </li>
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://getpelican.com/" target="_blank">
+                Pelican
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://python.org/" target="_blank">
+                Python.org
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://jinja.pocoo.org/" target="_blank">
+                Jinja2
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2014 MuppetGate
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
 
-    <span class="s">&quot;date&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
-    <span class="s">&quot;today&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
-    <span class="s">&quot;time&quot;</span><span class="p">:</span> <span class="n">current_time</span><span class="p">,</span>
-    <span class="s">&quot;now&quot;</span><span class="p">:</span> <span class="n">now</span><span class="p">,</span>
-    <span class="s">&quot;yesterday&quot;</span><span class="p">:</span> <span class="n">yesterday</span><span class="p">,</span>
-    <span class="s">&quot;tomorrow&quot;</span><span class="p">:</span> <span class="n">tomorrow</span><span class="p">,</span>
-    <span class="s">&quot;easter&quot;</span><span class="p">:</span> <span class="n">next_easter</span><span class="p">,</span>
-    <span class="s">&quot;mon&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s">&#39;mon&#39;</span><span class="p">),</span>
-    <span class="s">&quot;tue&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s">&#39;tue&#39;</span><span class="p">),</span>
-    <span class="s">&quot;wed&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s">&#39;wed&#39;</span><span class="p">),</span>
-    <span class="s">&quot;thu&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s">&#39;thu&#39;</span><span class="p">),</span>
-    <span class="s">&quot;fri&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s">&#39;fri&#39;</span><span class="p">),</span>
-    <span class="s">&quot;sat&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s">&#39;sat&#39;</span><span class="p">),</span>
-    <span class="s">&quot;sun&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s">&#39;sun&#39;</span><span class="p">),</span>
-<span class="p">}</span>
-</pre></div>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
 
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
 
-<p>Much better to look at , but it wouldn't work; I was now supplying another parameter: the weekday, which means that when it came to using the function I would be calling a function (because of the parameter list) when the map was being generated.</p>
-<p>What to do . . .</p>
-<p>And this is when I had my currying epiphany.</p>
-<p>Yes, the <strong>weekday</strong> function was being called, but what if I used it to generate a function object that carried the correct parameter and return that instead? And I'd finally discovered a use for currying, reducing the required parameter list by returning a function with the extra parameter included:</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">weekday</span><span class="p">(</span><span class="n">day_of_week_str</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This one one is a little bit trickier. We don&#39;t want a separate</span>
-<span class="sd">    function for each day of the week, so we need to use a bit of</span>
-<span class="sd">    currying to return a function that can handle the mapping.</span>
-<span class="sd">    :param day: The day of the week as a string, which we will use to map into a table for the</span>
-<span class="sd">    calculation.</span>
-<span class="sd">    :param day_of_week_str: the day of week as a three character string</span>
-<span class="sd">    :return: a function that will calculate the day of week and return it along with the format</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">_weekday</span><span class="p">(</span><span class="n">date_format</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">_get_current_date</span><span class="p">()</span> <span class="o">+</span> <span class="n">DAY_MAP</span><span class="p">[</span><span class="n">day_of_week_str</span><span class="o">.</span><span class="n">lower</span><span class="p">()],</span> <span class="n">date_format</span>
-
-    <span class="k">return</span> <span class="n">_weekday</span>
-</pre></div>
-
-
-<p>In Python you can define and function inside a function and then return it in exactly the same way as you can return a value or an object. Here, I'm returning a function that takes a single <code>date_format</code> parameter and returns a date object and the same parameter – just as my <code>DATE_FUNCTION_MAP</code> requires. By handling the day key string (<code>day_of_week_str</code>) inside the function returned, I've reduced the need for the parameter when the map is used.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/confessions-of-a-python-addict.html" rel="bookmark"
-                           title="Permalink to Confessions of a Python addict">Confessions of a Python addict</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2014-07-15T23:06:00+02:00">
-                Published: Tue 15 July 2014
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/muppetgate.html">MuppetGate</a>
-        </address>
-<p>In <a href="/category/programming.html">Programming</a>. </p>
-<p>tags: <a href="/tag/python.html">Python</a> </p>
-</footer><!-- /.post-info -->                <p>Hello! Well, this is my first techy blog. I've been in IT for more years than I care to remember, and I've never felt the need to write blog about it. A couple of decades covering C, C++, FoxPro (remember that??) and then Java. I've dabbled in ...</p>
-                <a class="readmore" href="/confessions-of-a-python-addict.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-<p class="paginator">
-    Page 1 / 1
-</p>
-                </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-
-                            <li><a href="http://twitter.com/muppetgate">twitter</a></li>
-                            <li><a href="http://github.com/muppetgate">github</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
 
 </body>
 </html>
