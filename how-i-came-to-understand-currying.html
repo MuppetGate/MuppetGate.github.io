@@ -187,10 +187,10 @@ I was pretty chuffed with the whole setup because it meant I could run clever li
 </pre></div>
 
 
-<p>Much better to look at , but it wouldn't work; I was now supplying another parameter: the weekday, which means that when it came to using the function I would be calling a function (because of the parameter list) when the map was being generated.</p>
+<p>Much better to look at , but it wouldn't work; I was now supplying a second parameter, the weekday, which means that when it came to using the function I would be calling a function (because of the parameter list) rather than just supplying one.</p>
 <p>What to do . . .</p>
 <p>And this is when I had my currying epiphany.</p>
-<p>Yes, the <strong>weekday</strong> function was being called, but what if I used it to generate a function object that carried the correct parameter and return that instead? And I'd finally discovered a use for currying, reducing the required parameter list by returning a function with the extra parameter included:</p>
+<p>Yes, the <strong>weekday</strong> function was being called, but what if I used it to generate a function object that carried the correct parameter and return that instead? And I'd finally discovered a use for currying: reducing the required parameter list by returning a function with the extra parameter included.</p>
 <div class="highlight"><pre><span class="k">def</span> <span class="nf">weekday</span><span class="p">(</span><span class="n">day_of_week_str</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This one one is a little bit trickier. We don&#39;t want a separate</span>
@@ -229,6 +229,11 @@ I was pretty chuffed with the whole setup because it meant I could run clever li
 
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="/the-case-of-the-missing-case.html">
+                            The Case of the Missing Case
+                        </a>
+                    </li>
                     <li class="list-group-item">
                         <a href="/lightning-is-here-to-stay.html">
                             Lightning is Here to Stay
@@ -277,6 +282,11 @@ I was pretty chuffed with the whole setup because it meant I could run clever li
                     <li class="list-group-item tag-1">
                         <a href="/tag/python.html">
                             Python
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="/tag/ruby.html">
+                            Ruby
                         </a>
                     </li>
                     <li class="list-group-item tag-4">

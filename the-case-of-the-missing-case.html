@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>The Case of the Missing Case - The MuppetGate Conspiracy</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="/the-case-of-the-missing-case.html">
+
+        <meta name="author" content="MuppetGate" />
+        <meta name="keywords" content="Python,Ruby" />
+        <meta name="description" content="Python is a language designed around simplicity. It has relatively few keywords and doesn&#39;t support all the latest clever gubbins that you&#39;ll find in languages such as Scala and Ruby, which is probably why it is finding great success as an introductory teaching language: a simple syntax that ..." />
+
+        <meta property="og:site_name" content="The MuppetGate Conspiracy" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="The Case of the Missing Case"/>
+        <meta property="og:url" content="/the-case-of-the-missing-case.html"/>
+        <meta property="og:description" content="Python is a language designed around simplicity. It has relatively few keywords and doesn&#39;t support all the latest clever gubbins that you&#39;ll find in languages such as Scala and Ruby, which is probably why it is finding great success as an introductory teaching language: a simple syntax that ..."/>
+        <meta property="article:published_time" content="2015-04-29" />
+            <meta property="article:section" content="Programming" />
+            <meta property="article:tag" content="Python" />
+            <meta property="article:tag" content="Ruby" />
+            <meta property="article:author" content="MuppetGate" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+The MuppetGate Conspiracy            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="/pages/about.html">
+                             About
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/the-case-of-the-missing-case.html"
+                       rel="bookmark"
+                       title="Permalink to The Case of the Missing Case">
+                        The Case of the Missing Case
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-04-29T06:41:00+02:00"> Wed 29 April 2015</time>
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/python.html">Python</a>
+        /
+	<a href="/tag/ruby.html">Ruby</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Python is a language designed around simplicity. It has relatively few keywords and doesn't support all the latest clever gubbins that you'll find in languages such as Scala and Ruby, which is probably why it is finding great success as an introductory teaching language: a simple syntax that introduces beginnners Though it is missing many of the newer language constructs, Python can still do anything that Ruby and Scala will do; it just might take you a little longer to code, that's all. :-)</p>
+<p>A case (if you'll excuse the expression) in point is the case statement. Most languages, like Java, have one:</p>
+<div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SwitchDemo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="kt">int</span> <span class="n">month</span> <span class="o">=</span> <span class="mi">8</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">monthString</span><span class="o">;</span>
+        <span class="k">switch</span> <span class="o">(</span><span class="n">month</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;January&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;February&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;March&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;April&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">5</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;May&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">6</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;June&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">7</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;July&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">8</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;August&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">9</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;September&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">10</span><span class="o">:</span> <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;October&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">11</span><span class="o">:</span> <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;November&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">12</span><span class="o">:</span> <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;December&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">default</span><span class="o">:</span> <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;Invalid month&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">monthString</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<p>And so does Ruby.</p>
+<div class="highlight"><pre><span class="c1"># Print the eighth month</span>
+
+<span class="n">month</span> <span class="o">=</span> <span class="mi">8</span>
+
+<span class="k">case</span> <span class="n">month</span>
+
+  <span class="k">when</span> <span class="mi">1</span>
+    <span class="n">month_string</span> <span class="o">=</span> <span class="s1">&#39;January&#39;</span>
+
+  <span class="k">when</span> <span class="mi">2</span>
+    <span class="n">month_string</span> <span class="o">=</span> <span class="s1">&#39;February&#39;</span>
+
+  <span class="k">when</span> <span class="mi">3</span>
+    <span class="n">month_string</span> <span class="o">=</span> <span class="s1">&#39;March&#39;</span>
+
+  <span class="k">when</span> <span class="mi">4</span>
+    <span class="n">month_string</span> <span class="o">=</span> <span class="s1">&#39;April&#39;</span>
+
+  <span class="k">when</span> <span class="mi">5</span>
+    <span class="n">month_string</span> <span class="o">=</span> <span class="s1">&#39;May&#39;</span>
+
+  <span class="k">when</span> <span class="mi">6</span>
+    <span class="n">month_string</span> <span class="o">=</span> <span class="s1">&#39;June&#39;</span>
+
+  <span class="k">when</span> <span class="mi">7</span>
+    <span class="n">month_string</span> <span class="o">=</span> <span class="s1">&#39;July&#39;</span>
+
+  <span class="k">when</span> <span class="mi">8</span>
+    <span class="n">month_string</span> <span class="o">=</span> <span class="s1">&#39;August&#39;</span>
+
+  <span class="k">when</span> <span class="mi">9</span>
+    <span class="n">month_string</span> <span class="o">=</span> <span class="s1">&#39;September&#39;</span>
+
+  <span class="k">when</span> <span class="mi">10</span>
+    <span class="n">month_string</span> <span class="o">=</span> <span class="s1">&#39;October&#39;</span>
+
+  <span class="k">when</span> <span class="mi">11</span>
+    <span class="n">month_string</span> <span class="o">=</span> <span class="s1">&#39;November&#39;</span>
+
+  <span class="k">when</span> <span class="mi">12</span>
+    <span class="n">month_string</span> <span class="o">=</span> <span class="s1">&#39;December&#39;</span>
+
+  <span class="k">else</span>
+    <span class="n">month_string</span> <span class="o">=</span> <span class="s1">&#39;Invalid month&#39;</span>
+<span class="k">end</span>
+
+<span class="nb">print</span> <span class="n">month_string</span>
+</pre></div>
+
+
+<p>But Python doesn't.</p>
+<div class="highlight"><pre><span class="p">:</span><span class="o">-</span><span class="p">(</span>
+</pre></div>
+
+
+<p>Python's designer wanted to leave out everything that was superfluous, and when you get right down to it, the <code>case</code> statement is nothing more than a thin veneer over an <code>if...elseif...else</code> statement. So here's how you do it in Python:</p>
+<div class="highlight"><pre><span class="n">month</span> <span class="o">=</span> <span class="mi">8</span>
+
+<span class="k">if</span> <span class="n">month</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;January&quot;</span>
+<span class="k">elif</span> <span class="n">month</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;February&quot;</span>
+<span class="k">elif</span> <span class="n">month</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;March&quot;</span>
+
+<span class="c"># I&#39;m pretty sure you get the picture ...</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;Invalid month&quot;</span>
+
+<span class="k">print</span> <span class="n">monthString</span>
+</pre></div>
+
+
+<p>Yes, it's not particulary exciting, but by the same token it also doesn’t hold any nasty surprises. Java's <code>switch...case</code> statement has copied the peculiar convention from the C language that allows you to fall through to the next case by leaving out the <code>break</code> statement.</p>
+<div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SwitchDemo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="kt">int</span> <span class="n">month</span> <span class="o">=</span> <span class="mi">8</span><span class="o">;</span>
+        <span class="n">String</span> <span class="n">monthString</span><span class="o">;</span>
+        <span class="k">switch</span> <span class="o">(</span><span class="n">month</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;January&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;February&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;March&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;April&quot;</span><span class="o">;</span>
+                     <span class="cm">/* break; */</span>
+            <span class="k">case</span> <span class="mi">5</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;May&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">6</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;June&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">7</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;July&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">8</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;August&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">9</span><span class="o">:</span>  <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;September&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">10</span><span class="o">:</span> <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;October&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">11</span><span class="o">:</span> <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;November&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="mi">12</span><span class="o">:</span> <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;December&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+            <span class="k">default</span><span class="o">:</span> <span class="n">monthString</span> <span class="o">=</span> <span class="s">&quot;Invalid month&quot;</span><span class="o">;</span>
+                     <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">monthString</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<p>This example will give us</p>
+<div class="highlight"><pre>April
+May
+</pre></div>
+
+
+<p>Now there are some case where this might be useful, but I can't help thinking that if you want to do something like this then you should be using a different code structure entirely to make it obvious why. Even though <code>switch...case</code> statements are usually created through repeated copy/pasting, I still run across many cases where a bug is introduced because of a missing <code>break</code>.
+Still, many believe that the Python way of doing things is needlessly verbose, and I suppose it is, which is why I tend to shy away from rambling <code>if...else</code> structures whenever possible, because in Python (and indeed Ruby) there is a much better way.
+If you read that piece I did on my <a href="/how-i-came-to-understand-currying.html">Alfred Date workflow</a> then you'll know I make heavy use of dictionaries to keep the code tight and maintainable.</p>
+<div class="highlight"><pre><span class="n">month</span> <span class="o">=</span> <span class="mi">8</span>
+
+<span class="n">month_map</span> <span class="o">=</span> <span class="p">{</span>
+
+    <span class="mi">1</span><span class="p">:</span> <span class="s">&quot;January&quot;</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="s">&quot;February&quot;</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">:</span> <span class="s">&quot;March&quot;</span><span class="p">,</span>
+    <span class="mi">4</span><span class="p">:</span> <span class="s">&quot;April&quot;</span><span class="p">,</span>
+    <span class="mi">5</span><span class="p">:</span> <span class="s">&quot;May&quot;</span><span class="p">,</span>
+    <span class="mi">6</span><span class="p">:</span> <span class="s">&quot;June&quot;</span><span class="p">,</span>
+    <span class="mi">7</span><span class="p">:</span> <span class="s">&quot;July&quot;</span><span class="p">,</span>
+    <span class="mi">8</span><span class="p">:</span> <span class="s">&quot;August&quot;</span><span class="p">,</span>
+    <span class="mi">9</span><span class="p">:</span> <span class="s">&quot;September&quot;</span><span class="p">,</span>
+    <span class="mi">10</span><span class="p">:</span> <span class="s">&quot;October&quot;</span><span class="p">,</span>
+    <span class="mi">11</span><span class="p">:</span> <span class="s">&quot;November&quot;</span><span class="p">,</span>
+    <span class="mi">12</span><span class="p">:</span> <span class="s">&quot;December&quot;</span>
+
+<span class="p">}</span>
+
+<span class="k">print</span> <span class="n">month_map</span><span class="p">[</span><span class="n">month</span><span class="p">]</span> <span class="k">if</span> <span class="n">month</span> <span class="ow">in</span> <span class="n">month_map</span> <span class="k">else</span> <span class="s">&quot;Invalid month&quot;</span>
+</pre></div>
+
+
+<p>Much neater I'm sure you'll agree.</p>
+<p>That's all very well for printing out simple strings, but the <code>case</code> statement is often used for executing code. Not a problem with Python (or Ruby for that matter) since the language can pass simple blocks of code around as they were data. Now, I'm going to deliberately overcomplicate things here, so remember it's just a demo!</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+
+<span class="n">month</span> <span class="o">=</span> <span class="mi">8</span>
+
+<span class="n">month_map</span> <span class="o">=</span> <span class="p">{</span>
+
+    <span class="mi">1</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="k">print</span> <span class="p">(</span><span class="s">&quot;January&quot;</span><span class="p">),</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;February&quot;</span><span class="p">),</span>
+    <span class="mi">3</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;March&quot;</span><span class="p">),</span>
+    <span class="mi">4</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;April&quot;</span><span class="p">),</span>
+    <span class="mi">5</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;May&quot;</span><span class="p">),</span>
+    <span class="mi">6</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;June&quot;</span><span class="p">),</span>
+    <span class="mi">7</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;July&quot;</span><span class="p">),</span>
+    <span class="mi">8</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;August&quot;</span><span class="p">),</span>
+    <span class="mi">9</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;September&quot;</span><span class="p">),</span>
+    <span class="mi">10</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;October&quot;</span><span class="p">),</span>
+    <span class="mi">11</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;November&quot;</span><span class="p">),</span>
+    <span class="mi">12</span><span class="p">:</span> <span class="k">lambda</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;December&quot;</span><span class="p">)</span>
+
+<span class="p">}</span>
+
+<span class="n">month_map</span><span class="p">[</span><span class="n">month</span><span class="p">]()</span> <span class="k">if</span> <span class="n">month</span> <span class="ow">in</span> <span class="n">month_map</span> <span class="k">else</span> <span class="k">print</span><span class="p">(</span><span class="s">&quot;Invalid month&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>The change here is that we put the code to be executed (the <code>print</code>) inside the map, rather than simply supplying a string. The <code>lambda</code> statement marks the map data as a function that can be executed. Note that we have also added brackets to the <code>month_map[month]</code> call to indicate that the map entry can be executed as code, and is not simply a data item.
+All very wonderful, but there are caveats:</p>
+<ul>
+<li>Lambda statements can only be single line expressions that return a value. This is why we have imported a specialist print function from Python 3. The standard print function is a simple procedure without a return value.</li>
+<li>You want a more complex function? Then you might need to create a separate <code>def</code> for each entry in the map, though you can perhaps alleviate this with a bit of judicious <a href="/how-i-came-to-understand-currying.html">currying</a></li>
+</ul>
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://twitter.com/muppetgate"><i class="fa fa-twitter-square fa-lg"></i> twitter</a></li>
+                <li class="list-group-item"><a href="http://github.com/muppetgate"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="/the-case-of-the-missing-case.html">
+                            The Case of the Missing Case
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/lightning-is-here-to-stay.html">
+                            Lightning is Here to Stay
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/how-i-came-to-understand-currying.html">
+                            How I came to understand Currying
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/confessions-of-a-python-addict.html">
+                            Confessions of a Python addict
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item"><a href="/"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+                <ul class="list-group" id="categories">
+                    <li class="list-group-item">
+                        <a href="/category/programming.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Programming
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/category/technology.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Technology
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <ul class="list-group list-inline tagcloud" id="tags">
+                    <li class="list-group-item tag-4">
+                        <a href="/tag/alfredapp.html">
+                            AlfredApp
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="/tag/apple.html">
+                            Apple
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-1">
+                        <a href="/tag/python.html">
+                            Python
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="/tag/ruby.html">
+                            Ruby
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="/tag/technology.html">
+                            Technology
+                        </a>
+                    </li>
+                </ul>
+            </li>
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://getpelican.com/" target="_blank">
+                Pelican
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://python.org/" target="_blank">
+                Python.org
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://jinja.pocoo.org/" target="_blank">
+                Jinja2
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2015 MuppetGate
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>
