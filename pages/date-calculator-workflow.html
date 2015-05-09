@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>Date Calculator Workflow - The MuppetGate Conspiracy</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="/pages/date-calculator-workflow.html">
+
+        <meta name="author" content="MuppetGate" />
+        <meta name="description" content="Hello there! I needed a bit of motivation to learn Python and Alfred workflows, so I thought I’d kill two horses with one bullet, so to speak. Right, so this is a date calculator – kind of. It won’t tell you when you will the lottery, or how long ..." />
+
+    <meta property="og:site_name" content="The MuppetGate Conspiracy" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Date Calculator Workflow"/>
+    <meta property="og:url" content="/pages/date-calculator-workflow.html"/>
+    <meta property="og:description" content="Hello there! I needed a bit of motivation to learn Python and Alfred workflows, so I thought I’d kill two horses with one bullet, so to speak. Right, so this is a date calculator – kind of. It won’t tell you when you will the lottery, or how long ..." />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+The MuppetGate Conspiracy            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="/pages/projects.html">
+                             Projects
+                          </a></li>
+                         <li><a href="/pages/about-me.html">
+                             About me
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content" class="body">
+        <h1 class="entry-title">Date Calculator Workflow</h1>
+        
+        <div class="entry-content">
+            <p>Hello there!</p>
+<p>I needed a bit of motivation to learn Python and Alfred workflows, so I thought I’d kill two horses with one bullet, so to speak.
+Right, so this is a date calculator – kind of. It won’t tell you when you will the lottery, or how long you’ve got to hide your ‘arty videos’ before  your wife gets home, but it will answer one or two <em>very simple</em> questions about dates.</p>
+<p><img alt="Date calculator workflow" src="http://www.packal.org/sites/default/files/public/workflow-files/muppetgatenetdatecalculator/screenshots/screenshot2014-06-21at084104.png" /></p>
+<h2>So what will you need?</h2>
+<p>Okay, this isn't a standalone application. It's a set of Python scripts that run inside <a href="http://alfredapp.com">Alfred</a> as a workflow. Alfred is a bit like <a href="http://blog.qsapp.com">QuickSilver</a> but a little more friendly. Unfortunately, you'll need the 'paid' version of Alfred to run workflows, but when you see the clever stuff that other people have done then I think you'll find it's well worth the money. 
+You'll need to install the date calculator workflow which you can get from here:</p>
+<p><a href="/assets/downloads/Date_Calculator.alfredworkflow">Download date calculator</a></p>
+<p>If you're not familiar with Alfred then it's best to play around with it before you start.</p>
+<h2>So how does it work?</h2>
+<p>For example, if you enter</p>
+<p><strong>dcalc 25.12.14 - 18.01.14</strong></p>
+<p>then it will tell you the number of days between those dates. Note that the workflow parses the command as you enter it, so you’ll see <em>invalid command</em>, <em>invalid expression</em> and <em>invalid format</em> errors as you type. Once you’ve completed the command then you’ll be given the result.</p>
+<p>You could also try</p>
+<p><strong>dcalc 25.12.14 - now</strong></p>
+<p>for the number of days until Christmas. (Always seems so far away . . .)</p>
+<p>Maybe you don’t want it in days, but would rather it in weeks:</p>
+<p><strong>dcalc 25.12.14 - now w</strong></p>
+<p>or days and weeks</p>
+<p><strong>dcalc 25.12.14 - now wd</strong></p>
+<p>or years, months, weeks and days</p>
+<p><strong>dcalc 25.12.14 - now ymwd</strong></p>
+<p>or</p>
+<p><strong>dcalc 25.12.14 - now long</strong></p>
+<p>will do the same thing. Personally, I always use the <em>long</em> format because it’s more accurate.</p>
+<p>For those who like to look ahead, you can add days to a date</p>
+<p><strong>dcalc now + 6d</strong></p>
+<p>or weeks</p>
+<p><strong>dcalc 18.12.14 + 9w</strong></p>
+<p>or combine ‘em</p>
+<p><strong>dcalc 18.12.12 + 5y 9d 3w - 2d + 1d 1w</strong></p>
+<p>What does that mess do?
+- Take the date 18.12.12
+- Add 5 years
+- Add another 9 days
+- Add another 3 weeks
+- Then take off 2 days
+- Add another 1 day
+- And then add another 1 week</p>
+<p>If you want to know what week number you’re in, then try this:</p>
+<p><strong>dcalc today wn</strong></p>
+<p>Or for a specific date:</p>
+<p><strong>dcalc 25.12.14 wn</strong></p>
+<p>You can also use the <em>today</em> thing in other places too:</p>
+<p><strong>dcalc today + 4d</strong></p>
+<p>And we have another thing called <em>time</em> because the workflow can handle times too:</p>
+<p><strong>dcalc time + 6h 8M</strong></p>
+<p>will add 6 hours and 8 minutes to the current time. Note the capital ‘M’ to denote minutes. Odd, I know . . .  sorry, but the workflow has to distinguish between this and a small ‘m’ (for months). I figured make this one a capital because it would see much less use. (It has for me.)</p>
+<p>If you just want the current time, then just enter</p>
+<p><strong>dcalc time</strong></p>
+<p>Here’s another time calculation
+<strong>dcalc 14:35 + 6h</strong></p>
+<p>That’s the time 6 hours from now, and for real nerdiness:</p>
+<p><strong>dcalc 21.06.14@14:20 - 23.01.12@09:21 long</strong></p>
+<p>Probably not all that useful, but some of this other stuff might be. You know all about</p>
+<p><strong>dcalc now</strong></p>
+<p>For giving you the current time and date. While you can use</p>
+<p><strong>dcalc tomorrow</strong></p>
+<p>for tomorrow’s date, and as you would expect</p>
+<p><strong>dcalc tomorrow + 1d</strong></p>
+<p>will give you the day after tomorrow.</p>
+<p><strong>dcalc next tue</strong></p>
+<p>will give you the date next Tuesday. Or for for Thursday you could enter</p>
+<p><strong>dcalc next tue + 2d</strong></p>
+<p>if you’re still a little too inebriated to realise that</p>
+<p><strong>dcalc next thu</strong></p>
+<p>will give you the same answer.</p>
+<p>That about covers it, I think. I haven’t done anything clever with locales, but you can pick a different date format with</p>
+<p><strong>dcalcset date format</strong></p>
+<p>And we also support both 12-hour and 24-hour time formats.</p>
+<p><strong>dcalcset time format</strong></p>
+<p>I would recommend sticking with the 24-hour format; it's a lot easier to type because the AM/PM symbols have to be in upper case.</p>
+<p>You can also set the combined date and time format using:</p>
+<p><strong>dcalcset date and time format</strong></p>
+<p>If you’re ever puzzled by <em>invalid command</em> or <em>invalid expression</em> errors, then start with the settings; they might be set incorrectly.</p>
+<p>Oh, almost forgot.</p>
+<p><strong>dcalc easter</strong></p>
+<p>Is the date for next Easter Sunday, for no other reason that I can never remember it, and now there’s an easy way to find out how many days until Christmas:</p>
+<p><strong>dcalc today - christmas</strong></p>
+<p>And to celebrate finishing my new book, I decided to add:</p>
+<p><strong>dcalc passover</strong></p>
+<h2>Alternative parser</h2>
+<p>If surround a simple expression in double quotes, then something quite magical happens:</p>
+<p><strong>dcalc "4 hours 8 minutes after 4pm"</strong></p>
+<p>or</p>
+<p><strong>dcalc "6 weeks and 4 days after next wednesday"</strong></p>
+<p>or</p>
+<p><strong>dcalc "1 day after tomorrow"</strong></p>
+<p>Yup! A natural date language parser!</p>
+<p>You can even combine it with the existing parser:</p>
+<p><strong>dcalc "next friday" + 1d</strong></p>
+<p>This is a little bit experimental (I might drop it later if it proves to be problematic), but I thought I'd throw it in for a bit of a fun.</p>
+<h2>Exclusions</h2>
+<p>Added at the request of a friend, though I'm not sure there's a lot of call for it. Okay, say you need to know how long you have to complete a project:</p>
+<p><strong>dcalc today - christmas</strong></p>
+<p>Not a problem, but hang on a mo – you don't like to work on weekends, so you'd better exclude them:</p>
+<p><strong>dcalc today - christmas exclude weekends</strong></p>
+<p>That'll exclude weekends from the calculations. Fantastic! But hang on, the wife's birthday! You won't be working on that day if you know what's good for you:</p>
+<p><strong>dcalc today - christmas exclude weekends 26.09.2014</strong></p>
+<p>Nicely saved, my friend; but there is still that small break you were planning in October:</p>
+<p><strong>dcalc today - christmas exclude weekends 26.09.2014 05.10.2014 to 10.10.2014</strong></p>
+<p>Crap! You're also having a wisdom tooth removed next wednesday</p>
+<p><strong>dcalc today - christmas exclude weekends 26.09.2014 05.10.2014 to 10.10.2014 next wed</strong></p>
+<p>Though I think you'll need more than a day to get over that. The <em>exclude</em> keyword is a little verbose for the lightning typists, so you can also use <em>x</em> instead:</p>
+<p><strong>dcalc today - christmas x weekends tuesdays</strong></p>
+<p>As you might have guessed, this will work out the number of days between now and Christmas, not counting weekends and Tuesdays. We also have a very wordy variation which excludes every day except the one specified:</p>
+<p><strong> dcalc today - easter x all except tuesdays</strong></p>
+<h3>Credits</h3>
+<p>A list of things that made my first attempt at Python programming possible:
+- Dean Jackson for his more-than-slightly awesome <a href="http://www.deanishe.net/alfred-workflow/">Alfred Workflow framework</a>, and for his ‘parse-as-you-type’ idea.
+- The folk at <a href="http://www.jetbrains.com/pycharm/">Jetbrains</a>, for making programming, in any language, bearable.
+- Peter Odding for writing <a href="https://humanfriendly.readthedocs.org/en/latest/">HumanFriendly</a>.
+- Gustavo Niemeyer for <a href="https://labix.org/python-dateutil">Python-DateUtil</a>.
+- Volker Birk for <a href="http://fdik.org/pyPEG/">PyPEG</a>.
+- Mike Taylor for <a href="https://github.com/bear/parsedatetime">ParseDateTime</a>.
+- <a href="http://programmingpraxis.com">Programming Praxis</a> for the Passover calculation.</p>
+<ul>
+<li>And finally, and by no means least – Mr Smirnoff for discovering how to bottle patience.</li>
+</ul>
+<h3>Version History</h3>
+<p>(Version 2.3) - Bug fixes. Reworked the auto formatting. You can now apply exclusions to date calculations as well as timespan calculations.
+Added function to return the date when given a year, a week number and an optional day of the week
+(Version 2.1) - Bug fixes. Made the default formatting a little bit more intelligent.
+Latest release (Version 2.0). Refactoring. Added a natural date language parser. Added support for 12-hour clock. Added function to get date of the next passover
+Latest release (Version 1.6). Refactoring. Added exclusion functionality, and macros for <em>year start</em> and <em>year end</em>. Changed the calls for days of the week: You now need to enter <em>next mon</em> to get the date for next Monday, but you can also now type <em>prev mon</em> to get the date for last Monday. Huzzah!
+Increased the accuracy of the date intervals. If you select <em>y</em> for the date format then you will get <em>11.5 years</em>. But if you select <em>ym</em> then you get <em>11 years, 6 months</em>. Trust me, it’s better this way.</p>
+<p>Latest release (Version 1.5). Refactoring. Rewrote the code for date subtraction arithmetic.
+Now it’s a lot more accurate, even when working with uneven months and weeks. Minor bug fixes.</p>
+<p>Last release (Version 1.4) Fixed bug that caused inaccuracies when calculating anniversaries.
+Refactored code to make it easier to add new date functions and date formatters. General tidy-up</p>
+<p>Last release (Version 1.3) Adds extra formatting functions (day of week) and bug fixes.</p>
+<p>Last release (Version 1.2) was an improvement to add user-defined macros.</p>
+<p>Last release (Version 1.1) was on the 01.07.2014. This included a new anniversary list function,
+and the addition of the international date format (yyyy-mm-dd).</p>
+<p>Last release (Version 1.0) was on the 27.06.2014. This included an improved date parser,
+added macros (days of week, christmas and easter) and a general tidy up.
+The symbol for getting the week number for a particular date has changed
+from ‘^’ to ‘!’ or ‘wn’. Why? Because I seemed to be struggling to find ‘^’ on the keyboard.</p>
+<h3>License</h3>
+<p>Well, I guess the <a href="http://opensource.org/licenses/MIT">MIT</a> one will do. :-)</p>
+<p>The MIT License (MIT)
+Copyright (c) 2014 MuppetGate Media</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+        </div>
+    </section>
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://twitter.com/muppetgate"><i class="fa fa-twitter-square fa-lg"></i> twitter</a></li>
+                <li class="list-group-item"><a href="http://github.com/muppetgate"><i class="fa fa-github-square fa-lg"></i> github</a></li>
+              </ul>
+            </li>
+
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
+                <ul class="list-group" id="recentposts">
+                    <li class="list-group-item">
+                        <a href="/the-case-of-the-missing-case.html">
+                            The Case of the Missing Case
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/lightning-is-here-to-stay.html">
+                            Lightning is Here to Stay
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/how-i-came-to-understand-currying.html">
+                            How I came to understand Currying
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/confessions-of-a-python-addict.html">
+                            Confessions of a Python addict
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item"><a href="/"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+                <ul class="list-group" id="categories">
+                    <li class="list-group-item">
+                        <a href="/category/programming.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Programming
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/category/technology.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Technology
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="list-group-item"><a href="/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <ul class="list-group list-inline tagcloud" id="tags">
+                    <li class="list-group-item tag-4">
+                        <a href="/tag/alfredapp.html">
+                            AlfredApp
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="/tag/apple.html">
+                            Apple
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-1">
+                        <a href="/tag/python.html">
+                            Python
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="/tag/ruby.html">
+                            Ruby
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="/tag/technology.html">
+                            Technology
+                        </a>
+                    </li>
+                </ul>
+            </li>
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://getpelican.com/" target="_blank">
+                Pelican
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://python.org/" target="_blank">
+                Python.org
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://jinja.pocoo.org/" target="_blank">
+                Jinja2
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2015 MuppetGate
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+
+</body>
+</html>
