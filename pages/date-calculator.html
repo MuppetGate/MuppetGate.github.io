@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>Date Calculator Workflow - The MuppetGate Conspiracy</title>
+    <title>Date Calculator - The MuppetGate Conspiracy</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,16 +10,16 @@
 
 
 
-<link rel="canonical" href="http://muppetgate.github.io/pages/date-calculator-workflow.html">
+<link rel="canonical" href="http://muppetgate.github.io/pages/date-calculator.html">
 
         <meta name="author" content="MuppetGate" />
-        <meta name="description" content="Hello there! I needed a bit of motivation to learn Python and Alfred workflows, so I thought I’d kill two horses with one bullet, so to speak. Right, so this is a date calculator – kind of. It won’t tell you when you will the lottery, or how long ..." />
+        <meta name="description" content="Hello! To help you with getting to grips with the Date Calculator Workflow, I&#39;ve put a couple of short examples here: Basic macros dcalc today – gives today&#39;s date dcalc time – gives the current time dcalc yesterday – gives yesterday&#39;s date dcalc tomorrow – gives tomorrow&#39;s date Date arithmetic ..." />
 
     <meta property="og:site_name" content="The MuppetGate Conspiracy" />
     <meta property="og:type" content="article"/>
-    <meta property="og:title" content="Date Calculator Workflow"/>
-    <meta property="og:url" content="http://muppetgate.github.io/pages/date-calculator-workflow.html"/>
-    <meta property="og:description" content="Hello there! I needed a bit of motivation to learn Python and Alfred workflows, so I thought I’d kill two horses with one bullet, so to speak. Right, so this is a date calculator – kind of. It won’t tell you when you will the lottery, or how long ..." />
+    <meta property="og:title" content="Date Calculator"/>
+    <meta property="og:url" content="http://muppetgate.github.io/pages/date-calculator.html"/>
+    <meta property="og:description" content="Hello! To help you with getting to grips with the Date Calculator Workflow, I&#39;ve put a couple of short examples here: Basic macros dcalc today – gives today&#39;s date dcalc time – gives the current time dcalc yesterday – gives yesterday&#39;s date dcalc tomorrow – gives tomorrow&#39;s date Date arithmetic ..." />
 
 
     <!-- Bootstrap -->
@@ -70,17 +70,25 @@ The MuppetGate Conspiracy            </a>
         <div class="col-sm-9">
 
     <section id="content" class="body">
-        <h1 class="entry-title">Date Calculator Workflow</h1>
+        <h1 class="entry-title">Date Calculator</h1>
         
         <div class="entry-content">
-            <p>Hello there!</p>
-<p>I needed a bit of motivation to learn Python and Alfred workflows, so I thought I’d kill two horses with one bullet, so to speak.
-Right, so this is a date calculator – kind of. It won’t tell you when you will the lottery, or how long you’ve got to hide your ‘arty videos’ before  your wife gets home, but it will answer one or two <em>very simple</em> questions about dates.</p>
-<p><img alt="Date calculator workflow" src="http://www.packal.org/sites/default/files/public/workflow-files/muppetgatenetdatecalculator/screenshots/screenshot2014-06-21at084104.png" /></p>
-<h2>So what will you need?</h2>
-<p>Okay, this isn't a standalone application. It's a set of Python scripts that run inside <a href="http://alfredapp.com">Alfred</a> as a workflow. Alfred is a bit like <a href="http://blog.qsapp.com">QuickSilver</a> but a little more friendly. Unfortunately, you'll need the 'paid' version of Alfred to run workflows, but when you see the clever stuff that other people have done then I think you'll find it's well worth the money. 
-You'll need to install the date calculator workflow which you can get from here:</p>
-<p><a href="http://muppetgate.github.io/assets/downloads/Date_Calculator.alfredworkflow">Download date calculator</a></p>
+            <p><img alt="Date calculator workflow" src="http://www.packal.org/sites/default/files/public/workflow-files/muppetgatenetdatecalculator/screenshots/screenshot2014-06-21at084104.png" /></p>
+<p>Hello! </p>
+<p>To help you with getting to grips with the Date Calculator Workflow, I've put a couple of short examples here:</p>
+<h2>Basic macros</h2>
+<p><strong>dcalc today</strong> – gives today's date 
+<strong>dcalc time</strong> – gives the current time
+<strong>dcalc yesterday</strong> – gives yesterday's date
+<strong>dcalc tomorrow</strong> – gives tomorrow's date</p>
+<h2>Date arithmetic</h2>
+<p>You can enter expressions that result in dates.</p>
+<p><strong>dcalc tomorrow + 1d</strong> – will give you the day after tomorrow
+<strong>dcalc today + 1w</strong> – returns the date one week from today</p>
+<p>You can also subtract from dates:
+ <strong>dcalc 25.12.2014 - 1w1d</strong> – will give you the date 1 week and 1 day before Christmas. Alternatively, you can also use:</p>
+<p><strong>dcalc 25.12.2014 - 8d</strong></p>
+<p>to give the same result. dcalc understands the following time operators for addition and subtraction:</p>
 <p>If you're not familiar with Alfred then it's best to play around with it before you start.</p>
 <h2>So how does it work?</h2>
 <p>For example, if you enter</p>

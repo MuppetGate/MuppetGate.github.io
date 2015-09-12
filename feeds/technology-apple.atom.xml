@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The MuppetGate Conspiracy</title><link href="http://muppetgate.github.io/" rel="alternate"></link><link href="http://muppetgate.github.io/feeds/technology-apple.atom.xml" rel="self"></link><id>http://muppetgate.github.io/</id><updated>2015-09-12T07:07:00+02:00</updated><entry><title>Apple Keynote . . . The Aftermath</title><link href="http://muppetgate.github.io/apple-keynote-the-aftermath.html" rel="alternate"></link><updated>2015-09-12T07:07:00+02:00</updated><author><name>MuppetGate</name></author><id>tag:muppetgate.github.io,2015-09-12:apple-keynote-the-aftermath.html</id><summary type="html">&lt;p&gt;It happened, the dust has settled, and after a few days mulling things over it's time to take a look at what the latest Apple keynote means in terms of Apple's future. Since Apple still has to rely on external suppliers, product information leaks out months before the actual keynote; nothing announced (new iphones, an effing big iPad and new AppleTV) was a great surprise, so instead of pouring over the specs, I'm going to look at a few key elements and see if we can glean the direction things are heading.&lt;/p&gt;
+&lt;div class="section" id="lightning-is-here-to-stay"&gt;
+&lt;h2&gt;Lightning is here to stay&lt;/h2&gt;
+&lt;p&gt;Shouldn't really be a great surprise, but most pundits – &lt;a class="reference external" href="http://muppetgate.github.io/lightning-is-here-to-stay.html"&gt;well, perhaps not most&lt;/a&gt; – were predicting that Apple would bin the Lightining connector in favour of USB-C. This was unlikely to happen because the Lightning connector has a number of advantages over USB-C; it's smaller for a start, and gives Apple control of the stuff that gets plugged into their devices (more or less).&lt;/p&gt;
+&lt;img alt="The new Apple Pencil" class="align-center" src="http://muppetgate.github.io/assets/images/apple_pencil.jpeg" /&gt;
+&lt;p&gt;Yup, looks a lot like a lightning connector to me. This is another interesting departure for Apple: the connector is being used to charge the device. What I expected to see was a lightning socket on the end of the pencil into which you would plug a lightning cable. Surely this would have been a lot more convenient since lightning cables are pretty common. Well, as far as I can tell, there are two reasons that Apple has taken this rather odd design decision.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Rather than hunting down a cable, you can charge your Pencil directly from the iPad Pro. Now personally, I think this would look a bit strange, which is why Apple won't be releasing pictures of anyone actually doing it. Fortunately, the Pencil will be shipping with some kind of cable dongle, so the iPad Pro charging method will just be for syncing for the first time and emergencies.&lt;/li&gt;
+&lt;li&gt;Safety. If Apple had put a lightning socket (or a micro-USB or USB-C or whatever) at the end of the pencil, then they have no way of knowing what is being used to charge it. Folk will buy cheap, third-party cables which could damage the Pencil. The lightning connector is smart; it will know if it is being plugged into some unapproved piece of charging kit and can protect the pencil from damage. Any device that can be used for half and hour after only fifteen seconds of charging has to have some kind of internal smarts to protect it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="apple-is-attacking-the-enterprise"&gt;
+&lt;h2&gt;Apple is attacking the enterprise&lt;/h2&gt;
+&lt;p&gt;During the keynote, Tim Cook went to great pains to point out that the iPad Pro is faster than 80% of the PCs shipped in the last year. That would not count the hardcore gamers, but it would certainly take in a fair chunk of the business market, and coupled with the Apple Pencil, it would capture a large proportion of the professional graphics market too.&lt;/p&gt;
+&lt;img alt="The iPad Pro" class="align-center" src="http://muppetgate.github.io/assets/images/ipadPro.jpeg" /&gt;
+&lt;p&gt;Taking into account their recent tie-ins with IBM and Cisco Systems, Apple is lining up its ducks for a push into the enterprise space. I wouldn't expect Apple to be planning for anything faster than a slow attrition; taking small victories in diverse areas. Contrary to popular belief, most companies get along fine with with their Windows setup, and I don't think this is going to suddenly change overnight.&lt;/p&gt;
+&lt;p&gt;But with Apple making such great strides in performance, in terms of hardware and software, the oft-asked question has come up again: When will the company dump Intel and go its own way?&lt;/p&gt;
+&lt;p&gt;My answer: Certainly not yet, and it's not even a question of technology; it's about perception. Folk are ready to accept that Apple can offer a viable alternative to Microsoft, but they don't believe that they can provide an alternative to Intel. Until we see more iPads being used in business and in the creation of high-end media, then people will be wary that the iGadgets won't meet their performance needs – and rightly so.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="apple-is-invading-the-living-room"&gt;
+&lt;h2&gt;Apple is invading the living room&lt;/h2&gt;
+&lt;p&gt;For the past year, I've been waging a lonely, one-man war against a magpie. As soon as Game Of Thrones comes on, he lands on the Sky dish and starts trying to strip the cabling. It's annoying beyond belief, and this is one of the reasons I'm so excited (I refuse to use the term 'super-excited'), about the new Apple TV.&lt;/p&gt;
+&lt;img alt="The Apple TV" class="align-center" src="http://muppetgate.github.io/assets/images/appletv_2.png" /&gt;
+&lt;p&gt;So what is it? Well, it's an iPad without a screen that plugs into your television set. It's a genius strategy because Apple has now declared that everything, everywhere is just another app:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Word processors&lt;/li&gt;
+&lt;li&gt;To do lists&lt;/li&gt;
+&lt;li&gt;Games&lt;/li&gt;
+&lt;li&gt;Home gadget controllers&lt;/li&gt;
+&lt;li&gt;TV channels&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Apple's main focus will be games and home automation control. The rest will take care of itself. The TV networks will supply their own apps to access their content alongside your regular subscription. Hey, you've paid already; why should they care how you choose to access it? For extras such as Sky Premiere, Apple will no doubt take a cut, and they won't really care which app you use. If you ask for the Mad Max movie, then Apple TV will show you which of the available apps will give it you. And if you can see the price of the download with each listing then that should spur a little competition in the network market.&lt;/p&gt;
+&lt;p&gt;Recording programmes will be a thing of the past, since all content will stay available forever after it has been released. You can just watch it whenever you want, though you will want to see each Game of Thrones episode as soon as it's available. There's always some inconsiderate joker who want to talk about it in the office the next morning . . .&lt;/p&gt;
+&lt;p&gt;For me, this was the high point of the keynote. I'd rather get my television via the internet, instead of an increasingly unreliable satellite dish.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="Technology"></category></entry></feed>
