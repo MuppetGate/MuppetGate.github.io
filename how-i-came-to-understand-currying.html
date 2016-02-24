@@ -10,7 +10,7 @@
 
 
 
-<link rel="canonical" href="http://muppetgate.github.io/how-i-came-to-understand-currying.html">
+<link rel="canonical" href="http://localhost:8000/how-i-came-to-understand-currying.html">
 
         <meta name="author" content="MuppetGate" />
         <meta name="keywords" content="Python,AlfredApp" />
@@ -19,7 +19,7 @@
         <meta property="og:site_name" content="The MuppetGate Conspiracy" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="How I came to understand Currying"/>
-        <meta property="og:url" content="http://muppetgate.github.io/how-i-came-to-understand-currying.html"/>
+        <meta property="og:url" content="http://localhost:8000/how-i-came-to-understand-currying.html"/>
         <meta property="og:description" content="Okay, it wasn&#39;t that I didn&#39;t understand the principles; I&#39;d read plenty of articles covering it, looked at lots of code in Groovy and Scala. No, the idea behind currying seemed pretty easy enough: using functions to create functions so that the required parameters can be reduced ..."/>
         <meta property="article:published_time" content="2014-08-01" />
             <meta property="article:section" content="Programming" />
@@ -29,14 +29,12 @@
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://muppetgate.github.io/theme/css/bootstrap.min.css" type="text/css"/>
-    <link href="http://muppetgate.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://localhost:8000/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://localhost:8000/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="http://muppetgate.github.io/theme/css/pygments/native.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://muppetgate.github.io/theme/css/style.css" type="text/css"/>
+    <link href="http://localhost:8000/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost:8000/theme/css/style.css" type="text/css"/>
 
-        <link href="http://muppetgate.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="The MuppetGate Conspiracy ATOM Feed"/>
 
 </head>
 <body>
@@ -50,20 +48,20 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://muppetgate.github.io/" class="navbar-brand">
+            <a href="http://localhost:8000/" class="navbar-brand">
 The MuppetGate Conspiracy            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="http://muppetgate.github.io/pages/projects.html">
+                         <li><a href="http://localhost:8000/pages/projects.html">
                              Projects
                           </a></li>
-                         <li><a href="http://muppetgate.github.io/pages/about-me.html">
+                         <li><a href="http://localhost:8000/pages/about-me.html">
                              About me
                           </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="http://muppetgate.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+              <li><a href="http://localhost:8000/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -79,7 +77,7 @@ The MuppetGate Conspiracy            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://muppetgate.github.io/how-i-came-to-understand-currying.html"
+                    <a href="http://localhost:8000/how-i-came-to-understand-currying.html"
                        rel="bookmark"
                        title="Permalink to How I came to understand Currying">
                         How I came to understand Currying
@@ -98,9 +96,9 @@ The MuppetGate Conspiracy            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="http://muppetgate.github.io/tag/python.html">Python</a>
+	<a href="http://localhost:8000/tag/python.html">Python</a>
         /
-	<a href="http://muppetgate.github.io/tag/alfredapp.html">AlfredApp</a>
+	<a href="http://localhost:8000/tag/alfredapp.html">AlfredApp</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
@@ -108,86 +106,86 @@ The MuppetGate Conspiracy            </a>
 <p>What I didn't understand was why the hell I'd ever need to do that. What I'd been lacking, all these years, was a decent use case. </p>
 <p>And a few weeks ago, one presented itself from the most unlikely of places: me!</p>
 <p>When I decide I'm going to knuckle down and learn a new programming language, I like to have a crack a simple poject that would have some real-world value. (I've done 'Hello World' apps to death.) Now I'm a big fan of the <a href="http://alfredapp.com">Alfred</a> launcher, so I thought I'd have a go at a workflow written in Python. I decided to go for a basic date calculator, as that's something I always seem to need, and I sometimes can't be bothered to go find the iPhone.</p>
-<p><img alt="dcalc for Alfred" src="http://muppetgate.github.io/assets/images/dcalc0.png" /></p>
+<p><img alt="dcalc for Alfred" src="http://localhost:8000/assets/images/dcalc0.png" /></p>
 <p>As well as being able to use dates and times in the calculations, I thought it would be nice if I included a constants (like Christmas, birthays) and variables (Easter, which moves around in ways I cannot begin to fathom). I also thought it would be nice to make easy for folk to add their own functions in the future. To this end, I came up with a simple scheme which did the business using a list of Python functions and a map.</p>
 <p>So we start with the function:</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">next_easter</span><span class="p">(</span><span class="n">date_format</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">next_easter</span><span class="p">(</span><span class="n">date_format</span><span class="p">):</span>
     <span class="n">easter_rule</span> <span class="o">=</span> <span class="n">rrule</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="n">YEARLY</span><span class="p">,</span> <span class="n">byeaster</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">easter_rule</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="n">_get_current_date</span><span class="p">(),</span> <span class="n">inc</span><span class="o">=</span><span class="bp">False</span><span class="p">),</span> <span class="n">date_format</span>
 </pre></div>
 
 
 <p>This returns the date that the next Easter Sunday falls on. It takes a date format as a parameter and also returns it, along with the calculated date, when the function exits. We've got a similar function for giving back the current date:</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">current_date</span><span class="p">(</span><span class="n">date_format</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">current_date</span><span class="p">(</span><span class="n">date_format</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">_get_current_date</span><span class="p">(),</span> <span class="n">date_format</span>
 </pre></div>
 
 
 <p>To expose the functions to the workflow, I simply put them in a map:</p>
-<div class="highlight"><pre><span class="n">DATE_FUNCTION_MAP</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><span class="n">DATE_FUNCTION_MAP</span> <span class="o">=</span> <span class="p">{</span>
 
-    <span class="s">&quot;date&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
-    <span class="s">&quot;today&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
-    <span class="s">&quot;time&quot;</span><span class="p">:</span> <span class="n">current_time</span><span class="p">,</span>
-    <span class="s">&quot;now&quot;</span><span class="p">:</span> <span class="n">now</span><span class="p">,</span>
-    <span class="s">&quot;yesterday&quot;</span><span class="p">:</span> <span class="n">yesterday</span><span class="p">,</span>
-    <span class="s">&quot;tomorrow&quot;</span><span class="p">:</span> <span class="n">tomorrow</span><span class="p">,</span>
-    <span class="s">&quot;easter&quot;</span><span class="p">:</span> <span class="n">next_easter</span><span class="p">,</span>
+    <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
+    <span class="s2">&quot;today&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
+    <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="n">current_time</span><span class="p">,</span>
+    <span class="s2">&quot;now&quot;</span><span class="p">:</span> <span class="n">now</span><span class="p">,</span>
+    <span class="s2">&quot;yesterday&quot;</span><span class="p">:</span> <span class="n">yesterday</span><span class="p">,</span>
+    <span class="s2">&quot;tomorrow&quot;</span><span class="p">:</span> <span class="n">tomorrow</span><span class="p">,</span>
+    <span class="s2">&quot;easter&quot;</span><span class="p">:</span> <span class="n">next_easter</span><span class="p">,</span>
 <span class="p">}</span>
 </pre></div>
 
 
 <p>The map key acts as the keyword to call the function and supply it to the workflow. When the user types the key, the workflow will pick the function from the map, run it and return the date. </p>
-<div class="highlight"><pre><span class="k">return</span> <span class="n">DATE_FUNCTION_MAP</span><span class="p">[</span><span class="n">key</span><span class="p">](</span><span class="n">date_format_str</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">DATE_FUNCTION_MAP</span><span class="p">[</span><span class="n">key</span><span class="p">](</span><span class="n">date_format_str</span><span class="p">)</span>
 </pre></div>
 
 
 <p>As you can see, the function can do anything as long as it takes a date format as a single parameter and returns a date object along with a date format. (And I love the fact that you can return more than one value from a Python function.) 
 I was pretty chuffed with the whole setup because it meant I could run clever little calculations like this:</p>
-<p><img alt="dcalc for Alfred" src="http://muppetgate.github.io/assets/images/dcalc1.png" /></p>
+<p><img alt="dcalc for Alfred" src="http://localhost:8000/assets/images/dcalc1.png" /></p>
 <p>Now the trouble came when a friend asked if I could add another function to the workflow.
 'Name it,' I said confidently.
 'Well, if I type in a day of the week, could you tell me the next date that it falls on?'
 'I reckon so. What if I type "Tue" and the current day is Tuesday?'
 'Then I want the date for the next Tuesday.'</p>
 <p>No problem. All I needed was a function that took the day of the week and returned the next occurrence. The only thing was that this function has to take a single parameter (the date format) and return two values (a date object and a date format). So, my first uneducated attempt looked like this:</p>
-<div class="highlight"><pre><span class="n">DATE_FUNCTION_MAP</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><span class="n">DATE_FUNCTION_MAP</span> <span class="o">=</span> <span class="p">{</span>
 
-    <span class="s">&quot;date&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
-    <span class="s">&quot;today&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
-    <span class="s">&quot;time&quot;</span><span class="p">:</span> <span class="n">current_time</span><span class="p">,</span>
-    <span class="s">&quot;now&quot;</span><span class="p">:</span> <span class="n">now</span><span class="p">,</span>
-    <span class="s">&quot;yesterday&quot;</span><span class="p">:</span> <span class="n">yesterday</span><span class="p">,</span>
-    <span class="s">&quot;tomorrow&quot;</span><span class="p">:</span> <span class="n">tomorrow</span><span class="p">,</span>
-    <span class="s">&quot;easter&quot;</span><span class="p">:</span> <span class="n">next_easter</span><span class="p">,</span>
-    <span class="s">&quot;mon&quot;</span><span class="p">:</span> <span class="n">get_Monday</span><span class="p">,</span>
-    <span class="s">&quot;tue&quot;</span><span class="p">:</span> <span class="n">get_Tuesday</span><span class="p">,</span>
-    <span class="s">&quot;wed&quot;</span><span class="p">:</span> <span class="n">get_Wednesday</span><span class="p">,</span>
-    <span class="s">&quot;thu&quot;</span><span class="p">:</span> <span class="n">get_Thursday</span><span class="p">,</span>
-    <span class="s">&quot;fri&quot;</span><span class="p">:</span> <span class="n">get_Friday</span><span class="p">,</span>
-    <span class="s">&quot;sat&quot;</span><span class="p">:</span> <span class="n">get_Saturday</span><span class="p">,</span>
-    <span class="s">&quot;sun&quot;</span><span class="p">:</span> <span class="n">get_Sunday</span>
+    <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
+    <span class="s2">&quot;today&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
+    <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="n">current_time</span><span class="p">,</span>
+    <span class="s2">&quot;now&quot;</span><span class="p">:</span> <span class="n">now</span><span class="p">,</span>
+    <span class="s2">&quot;yesterday&quot;</span><span class="p">:</span> <span class="n">yesterday</span><span class="p">,</span>
+    <span class="s2">&quot;tomorrow&quot;</span><span class="p">:</span> <span class="n">tomorrow</span><span class="p">,</span>
+    <span class="s2">&quot;easter&quot;</span><span class="p">:</span> <span class="n">next_easter</span><span class="p">,</span>
+    <span class="s2">&quot;mon&quot;</span><span class="p">:</span> <span class="n">get_Monday</span><span class="p">,</span>
+    <span class="s2">&quot;tue&quot;</span><span class="p">:</span> <span class="n">get_Tuesday</span><span class="p">,</span>
+    <span class="s2">&quot;wed&quot;</span><span class="p">:</span> <span class="n">get_Wednesday</span><span class="p">,</span>
+    <span class="s2">&quot;thu&quot;</span><span class="p">:</span> <span class="n">get_Thursday</span><span class="p">,</span>
+    <span class="s2">&quot;fri&quot;</span><span class="p">:</span> <span class="n">get_Friday</span><span class="p">,</span>
+    <span class="s2">&quot;sat&quot;</span><span class="p">:</span> <span class="n">get_Saturday</span><span class="p">,</span>
+    <span class="s2">&quot;sun&quot;</span><span class="p">:</span> <span class="n">get_Sunday</span>
 <span class="p">}</span>
 </pre></div>
 
 
 <p>Seven functions, one for each day of the week. It wasn't bad; it did the job, but it just didn’t feel very Pythony. What I was really after was single function that could take a parameter to indicate the day of the week I was looking to process:</p>
-<div class="highlight"><pre><span class="n">DATE_FUNCTION_MAP</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><span class="n">DATE_FUNCTION_MAP</span> <span class="o">=</span> <span class="p">{</span>
 
-    <span class="s">&quot;date&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
-    <span class="s">&quot;today&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
-    <span class="s">&quot;time&quot;</span><span class="p">:</span> <span class="n">current_time</span><span class="p">,</span>
-    <span class="s">&quot;now&quot;</span><span class="p">:</span> <span class="n">now</span><span class="p">,</span>
-    <span class="s">&quot;yesterday&quot;</span><span class="p">:</span> <span class="n">yesterday</span><span class="p">,</span>
-    <span class="s">&quot;tomorrow&quot;</span><span class="p">:</span> <span class="n">tomorrow</span><span class="p">,</span>
-    <span class="s">&quot;easter&quot;</span><span class="p">:</span> <span class="n">next_easter</span><span class="p">,</span>
-    <span class="s">&quot;mon&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s">&#39;mon&#39;</span><span class="p">),</span>
-    <span class="s">&quot;tue&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s">&#39;tue&#39;</span><span class="p">),</span>
-    <span class="s">&quot;wed&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s">&#39;wed&#39;</span><span class="p">),</span>
-    <span class="s">&quot;thu&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s">&#39;thu&#39;</span><span class="p">),</span>
-    <span class="s">&quot;fri&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s">&#39;fri&#39;</span><span class="p">),</span>
-    <span class="s">&quot;sat&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s">&#39;sat&#39;</span><span class="p">),</span>
-    <span class="s">&quot;sun&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s">&#39;sun&#39;</span><span class="p">),</span>
+    <span class="s2">&quot;date&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
+    <span class="s2">&quot;today&quot;</span><span class="p">:</span> <span class="n">current_date</span><span class="p">,</span>
+    <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="n">current_time</span><span class="p">,</span>
+    <span class="s2">&quot;now&quot;</span><span class="p">:</span> <span class="n">now</span><span class="p">,</span>
+    <span class="s2">&quot;yesterday&quot;</span><span class="p">:</span> <span class="n">yesterday</span><span class="p">,</span>
+    <span class="s2">&quot;tomorrow&quot;</span><span class="p">:</span> <span class="n">tomorrow</span><span class="p">,</span>
+    <span class="s2">&quot;easter&quot;</span><span class="p">:</span> <span class="n">next_easter</span><span class="p">,</span>
+    <span class="s2">&quot;mon&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s1">&#39;mon&#39;</span><span class="p">),</span>
+    <span class="s2">&quot;tue&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s1">&#39;tue&#39;</span><span class="p">),</span>
+    <span class="s2">&quot;wed&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s1">&#39;wed&#39;</span><span class="p">),</span>
+    <span class="s2">&quot;thu&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s1">&#39;thu&#39;</span><span class="p">),</span>
+    <span class="s2">&quot;fri&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s1">&#39;fri&#39;</span><span class="p">),</span>
+    <span class="s2">&quot;sat&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s1">&#39;sat&#39;</span><span class="p">),</span>
+    <span class="s2">&quot;sun&quot;</span><span class="p">:</span> <span class="n">weekday</span><span class="p">(</span><span class="s1">&#39;sun&#39;</span><span class="p">),</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -196,7 +194,7 @@ I was pretty chuffed with the whole setup because it meant I could run clever li
 <p>What to do . . .</p>
 <p>And this is when I had my currying epiphany.</p>
 <p>Yes, the <strong>weekday</strong> function was being called, but what if I used it to generate a function object that carried the correct parameter and return that instead? And I'd finally discovered a use for currying: reducing the required parameter list by returning a function with the extra parameter included.</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">weekday</span><span class="p">(</span><span class="n">day_of_week_str</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">weekday</span><span class="p">(</span><span class="n">day_of_week_str</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This one one is a little bit trickier. We don&#39;t want a separate</span>
 <span class="sd">    function for each day of the week, so we need to use a bit of</span>
@@ -226,7 +224,7 @@ I was pretty chuffed with the whole setup because it meant I could run clever li
             var disqus_shortname = 'muppetgateconspiracy'; // required: replace example with your forum shortname
 
                     var disqus_identifier = 'how-i-came-to-understand-currying';
-                var disqus_url = 'http://muppetgate.github.io/how-i-came-to-understand-currying.html';
+                var disqus_url = 'http://localhost:8000/how-i-came-to-understand-currying.html';
 
             var disqus_config = function () {
                 this.language = "en";
@@ -265,105 +263,65 @@ I was pretty chuffed with the whole setup because it meant I could run clever li
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="http://muppetgate.github.io/the-jetbrains-subscription-bloodbath.html">
+                        <a href="http://localhost:8000/is-swift-really-python-under-a-funky-new-skin.html">
+                            Is Swift really Python under a funky new skin?
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://localhost:8000/the-jetbrains-subscription-bloodbath.html">
                             The Jetbrains Subscription Bloodbath
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://muppetgate.github.io/apple-keynote-the-aftermath.html">
+                        <a href="http://localhost:8000/apple-keynote-the-aftermath.html">
                             Apple Keynote . . . The Aftermath
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://muppetgate.github.io/wwdc-keynote-the-good-the-bad-and-the-really-weird.html">
+                        <a href="http://localhost:8000/wwdc-keynote-the-good-the-bad-and-the-really-weird.html">
                             WWDC Keynote. The Good, the Bad . . . and the really Weird
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://muppetgate.github.io/but-but-i-like-type-checking.html">
+                        <a href="http://localhost:8000/but-but-i-like-type-checking.html">
                             But ... but ... I like type-checking!
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="http://muppetgate.github.io/the-black-white-world-of-apple-journalism.html">
-                            The Black & White World of Apple Journalism
                         </a>
                     </li>
                 </ul>
             </li>
 
-            <li class="list-group-item"><a href="http://muppetgate.github.io/"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
+            <li class="list-group-item"><a href="http://localhost:8000/"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
                 <ul class="list-group" id="categories">
                     <li class="list-group-item">
-                        <a href="http://muppetgate.github.io/category/apple.html">
+                        <a href="http://localhost:8000/category/apple.html">
                             <i class="fa fa-folder-open fa-lg"></i> Apple
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://muppetgate.github.io/category/jetbrains.html">
+                        <a href="http://localhost:8000/category/jetbrains.html">
                             <i class="fa fa-folder-open fa-lg"></i> Jetbrains
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://muppetgate.github.io/category/programming.html">
+                        <a href="http://localhost:8000/category/programming.html">
                             <i class="fa fa-folder-open fa-lg"></i> Programming
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="http://muppetgate.github.io/category/technology.html">
+                        <a href="http://localhost:8000/category/python-swift.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Python, Swift
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="http://localhost:8000/category/technology.html">
                             <i class="fa fa-folder-open fa-lg"></i> Technology
                         </a>
                     </li>
                 </ul>
             </li>
 
-            <li class="list-group-item"><a href="http://muppetgate.github.io/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+            <li class="list-group-item"><a href="http://localhost:8000/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group list-inline tagcloud" id="tags">
-                    <li class="list-group-item tag-4">
-                        <a href="http://muppetgate.github.io/tag/alfredapp.html">
-                            AlfredApp
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://muppetgate.github.io/tag/android.html">
-                            Android
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-1">
-                        <a href="http://muppetgate.github.io/tag/apple.html">
-                            Apple
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://muppetgate.github.io/tag/jetbrains.html">
-                            Jetbrains
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://muppetgate.github.io/tag/microsoft.html">
-                            Microsoft
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-1">
-                        <a href="http://muppetgate.github.io/tag/python.html">
-                            Python
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://muppetgate.github.io/tag/ruby.html">
-                            Ruby
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://muppetgate.github.io/tag/software.html">
-                            Software
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-1">
-                        <a href="http://muppetgate.github.io/tag/technology.html">
-                            Technology
-                        </a>
-                    </li>
                 </ul>
             </li>
     <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
@@ -395,7 +353,7 @@ I was pretty chuffed with the whole setup because it meant I could run clever li
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2015 MuppetGate
+         <div class="col-xs-10">&copy; 2016 MuppetGate
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
@@ -403,13 +361,13 @@ I was pretty chuffed with the whole setup because it meant I could run clever li
       </div>
    </div>
 </footer>
-<script src="http://muppetgate.github.io/theme/js/jquery.min.js"></script>
+<script src="http://localhost:8000/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://muppetgate.github.io/theme/js/bootstrap.min.js"></script>
+<script src="http://localhost:8000/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://muppetgate.github.io/theme/js/respond.min.js"></script>
+<script src="http://localhost:8000/theme/js/respond.min.js"></script>
 
     <!-- Disqus -->
     <script type="text/javascript">
